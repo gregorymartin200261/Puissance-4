@@ -12,3 +12,16 @@ C:\Users\gregg\Desktop\puissance_4\puissance_4\bin\Debug\netcoreapp3.1\puissance
 C:\Users\gregg\Desktop\puissance_4\puissance_4\obj\Debug\netcoreapp3.1\puissance_4.dll
 C:\Users\gregg\Desktop\puissance_4\puissance_4\obj\Debug\netcoreapp3.1\puissance_4.pdb
 C:\Users\gregg\Desktop\puissance_4\puissance_4\obj\Debug\netcoreapp3.1\puissance_4.genruntimeconfig.cache
+C:\Users\200261\Desktop\puissance_4\puissance_4\bin\Debug\netcoreapp3.1\puissance_4.exe
+C:\Users\200261\Desktop\puissance_4\puissance_4\bin\Debug\netcoreapp3.1\puissance_4.deps.json
+C:\Users\200261\Desktop\puissance_4\puissance_4\bin\Debug\netcoreapp3.1\puissance_4.runtimeconfig.json
+C:\Users\200261\Desktop\puissance_4\puissance_4\bin\Debug\netcoreapp3.1\puissance_4.runtimeconfig.dev.json
+C:\Users\200261\Desktop\puissance_4\puissance_4\bin\Debug\netcoreapp3.1\puissance_4.dll
+C:\Users\200261\Desktop\puissance_4\puissance_4\bin\Debug\netcoreapp3.1\puissance_4.pdb
+C:\Users\200261\Desktop\puissance_4\puissance_4\obj\Debug\netcoreapp3.1\puissance_4.csprojAssemblyReference.cache
+C:\Users\200261\Desktop\puissance_4\puissance_4\obj\Debug\netcoreapp3.1\puissance_4.AssemblyInfoInputs.cache
+C:\Users\200261\Desktop\puissance_4\puissance_4\obj\Debug\netcoreapp3.1\puissance_4.AssemblyInfo.cs
+C:\Users\200261\Desktop\puissance_4\puissance_4\obj\Debug\netcoreapp3.1\puissance_4.csproj.CoreCompileInputs.cache
+C:\Users\200261\Desktop\puissance_4\puissance_4\obj\Debug\netcoreapp3.1\puissance_4.dll
+C:\Users\200261\Desktop\puissance_4\puissance_4\obj\Debug\netcoreapp3.1\puissance_4.pdb
+C:\Users\200261\Desktop\puissance_4\puissance_4\obj\Debug\netcoreapp3.1\puissance_4.genruntimeconfig.cache
