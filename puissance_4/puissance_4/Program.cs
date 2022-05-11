@@ -4,6 +4,7 @@ namespace puissance4
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             int[,] grils = new int[6, 7]
@@ -15,6 +16,11 @@ namespace puissance4
                 { 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0, 0}
             };
+
+            Console.WriteLine("Puissance 4 en c# par Gregory Martin");
+            Console.WriteLine("APPUYEZ POUR JOUER");
+            Console.ReadLine();
+            Console.Clear();
 
             columncheck(grils);
             
@@ -73,7 +79,7 @@ namespace puissance4
 
             while (!Passerel(grils))
             {
-                //Console.Clear();
+                Console.Clear();
                 AfficheMatrice(grils);
 
                 if(player)
@@ -335,100 +341,53 @@ namespace puissance4
             int ligne2;
             int rouge = 0;
             int jaune = 0;
+            int nombrejaune = 0;
+            int nombrerouge = 0;
 
             // ---------------------------------------------
 
             //Verif puissance 4 OblD
 
             //Etat : en cours de correction
-            while (pass)
+            for (int numberLigne = ligne; numberLigne > 2; numberLigne--)
             {
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < column - 2; i++)
                 {
-                    if(column!=0)
+                    nombrejaune = 0;
+                    nombrerouge = 0;
+                    if (grils[numberLigne, i] == 1)
                     {
-                        column--;
-                    }
-                    else
-                    {
-                        if (ligne != 0) { ligne--; }else vod = false;jaune = 0;rouge = 0;}      
-
-                    if (grils[ligne, column] !=0)
-                    {
-                        column2 = column;
-                        ligne2 = ligne;
-                        while(vod)
+                        for (int j = 0; j < 4; j++)
                         {
-
-                            if(column2!=grils.GetLength(1)-1)
+                            if (grils[numberLigne - j, i + j] == 1)
                             {
-                                column2++;
-
-                                if (ligne2 != 0)
-                                {
-                                    ligne2--;
-                                }
-                                else vod = false;//
-                            }
-
-                            if(column2==grils.GetLength(1)-1 & ligne2==0)
-                            {
-                                vod = true;
-                                i = 10; 
-                            }
-                            
-
-                            if (grils[ligne2, column2] == 1)
-                            {
-                                rouge++;
-                                jaune = 0;
-                            }
-                            
-                            if (grils[ligne2, column2] == 2)
-                            {
-                                jaune++;
-                                rouge=0;
-                            }
-
-                            Console.WriteLine(rouge);
-
-                            if (grils[ligne2, column2] == 0)
-                            {
-                                vod = false;
-                                jaune = 0;
-                                rouge = 0;
-                            }
-
-                            if (rouge == 4)
-                            {
-                                Console.WriteLine("Un puissance 4 rouge a ete détecté");
-                                Console.ReadLine();
-                                pass = false;
-                                i = 9;
-                                puis4 = true;
-                                vod = false;
-                      
-                            }
-
-                            if (jaune == 4)
-                            {
-                                Console.WriteLine("Un puissance 4 jaune a ete détecté");
-                                Console.ReadLine();
-                                pass = false;
-                                i = 9;
-                                vod = false;
-                                puis4 = true;
-                     
+                                nombrerouge = nombrerouge + grils[numberLigne - j, i + j];
                             }
                         }
                     }
-                    if (column == 0)
+                    else if (grils[numberLigne, i] == 2)
                     {
-                        if (ligne == 0)
+                        for (int j = 0; j < 4; j++)
                         {
-                            pass = false;
-                            i = 10;
+                            if (grils[numberLigne - j, i + j] == 2)
+                            {
+                                nombrejaune = nombrejaune + grils[numberLigne - j, i + j];
+                            }
                         }
+                    }
+                    if (nombrerouge == 4)
+                    {
+                        Console.WriteLine("Un puissance 4 rouge a ete détecté");
+                        Console.ReadLine();
+                        pass = false;
+                        puis4 = true;
+                    }
+                    if (nombrejaune == 8)
+                    {
+                        Console.WriteLine("Un puissance 4 jaune a ete détecté");
+                        Console.ReadLine();
+                        pass = false;
+                        puis4 = true;
                     }
                 }
             }
@@ -448,18 +407,18 @@ namespace puissance4
             // INT
             int column = grils.GetLength(1) - 1;
             int ligne = grils.GetLength(0) - 1;
-            int column2;
-            int ligne2;
+            int column2 = 0;
+            int ligne2 = 0;
             int rouge = 0;
             int jaune = 0;
 
             // ---------------------------------------------
 
             //Verif puissance 4 OblG
-           
+
             //Etat : en cours
             while (pass)
-            { 
+            {
 
                 for (int i = 0; i < 8; i++)
                 {
@@ -522,13 +481,11 @@ namespace puissance4
                             if (rouge == 4)
                             {
                                 Console.WriteLine("Un puissance 4 rouge a ete détecté");
-                                Console.ReadLine();
                                 Console.WriteLine("AFFICHER");
                                 Console.ReadLine();
                                 pass = false;
                                 puis4 = true;
-                                i = 9;
-                                Obd = false;
+                                i = 10;
                                 jaune = 0;
                                 rouge = 0;
                             }
@@ -540,8 +497,7 @@ namespace puissance4
                                 Console.ReadLine();
                                 pass = false;
                                 puis4 = true;
-                                i = 9;
-                                Obd = false;
+                                i = 10;
                                 jaune = 0;
                                 rouge = 0;
                             }
