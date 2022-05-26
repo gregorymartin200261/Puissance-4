@@ -16,8 +16,34 @@ namespace puissance4
                 { 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0, 0}
             };
-
-            Console.WriteLine("Puissance 4 en c# par Gregory Martin");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(@"
+         _         _                         _             _                _                 _                   _                    _               _                    
+        /\ \      /\_\                      /\ \          / /\             / /\              / /\                /\ \     _          /\ \             /\ \        
+       /  \ \    / / /         _            \ \ \        / /  \           / /  \            / /  \              /  \ \   /\_\       /  \ \           /  \ \        
+      / /\ \ \   \ \ \__      /\_\          /\ \_\      / / /\ \__       / / /\ \__        / / /\ \            / /\ \ \_/ / /      / /\ \ \         / /\ \ \     
+     / / /\ \_\   \ \___\    / / /         / /\/_/     / / /\ \___\     / / /\ \___\      / / /\ \ \          / / /\ \___/ /      / / /\ \ \       / / /\ \_\  
+    / / /_/ / /    \__  /   / / /         / / /        \ \ \ \/___/     \ \ \ \/___/     / / /  \ \ \        / / /  \/____/      / / /  \ \_\     / /_/_ \/_/  
+   / / /__\/ /     / / /   / / /         / / /          \ \ \            \ \ \          / / /___/ /\ \      / / /    / / /      / / /    \/_/    / /____/\     
+  / / /_____/     / / /   / / /         / / /       _    \ \ \       _    \ \ \        / / /_____/ /\ \    / / /    / / /      / / /            / /\____\/     
+ / / /           / / /___/ / /      ___/ / /__     /_/\__/ / /      /_/\__/ / /       / /_________/\ \ \  / / /    / / /      / / /________    / / /______     
+/ / /           / / /____\/ /      /\__\/_/___\    \ \/___/ /       \ \/___/ /       / / /_       __\ \_\/ / /    / / /      / / /_________\  / / /_______\    
+\/_/            \/_________/       \/_________/     \_____\/         \_____\/        \_\___\     /____/_/\/_/     \/_/       \/____________/  \/__________/                                                                                                                                                                    
+                                             
+                                                                               _           
+                                                                           _  /\ \         
+                                                                          /\_\\ \ \        
+                                                                         / / / \ \ \       
+                                                                        / / /   \ \ \      
+                                                                        \ \ \____\ \ \     
+                                                                         \ \________\ \    
+                                                                          \/________/\ \   
+                                                                                    \ \ \  
+                                                                                     \ \_\ 
+                                                                                      \/_/ 
+                   
+                                                            ");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("APPUYEZ POUR JOUER");
             Console.ReadLine();
             Console.Clear();
@@ -98,7 +124,7 @@ namespace puissance4
                     }
                 }   
                 else {
-                    Random rnd = new Random();
+                    Random rnd =  new Random();
                     int valeur = rnd.Next(1,6);
                     platab = valeur;
                 }
@@ -107,7 +133,11 @@ namespace puissance4
                 {
                     if(grils[ligne, platab] != 0)
                     {
-                        ligne--;
+                        if(ligne != 0)
+                        {
+                            ligne--;
+                        }
+
                     }
                     else
                     {
@@ -115,9 +145,9 @@ namespace puissance4
                     }
                 }
                 okpass=false;
-                if(player)
+                if (player)
                 {
-                    grils[ligne,platab] = 1;
+                    grils[ligne, platab] = 1;
                     player = false;
                 }
                 else
